@@ -3,10 +3,14 @@
  * (c) 2013-2013 GoCardless, Ltd.
  * https://github.com/gocardless-ng/ng-gc-loader-directive.git
  * License: MIT
- */angular.module('loader-template.html', []).run(function($templateCache) {
+ */
+(function(){
+'use strict';
+
+angular.module('loader-template.html', []).run(['$templateCache', function($templateCache) {
   $templateCache.put('loader-template.html',
     '<div class="loading" ng-show="loading"><div class="loading__container"><p class="loading__text">{{ loadingStatus }}</p></div></div>');
-});
+}]);
 
 'use strict';
 
@@ -48,3 +52,4 @@ angular.module('gc.loader', [
     };
 
   }]);
+})();
