@@ -9,7 +9,7 @@
 
 angular.module('loader-template.html', []).run(function($templateCache) {
   $templateCache.put('loader-template.html',
-    '<div class="loading" ng-show="loading"><div class="notification"><p class="u-text-h6 u-text-heavy">{{ loadingStatus }}</p></div></div>');
+    '<div class="loading" ng-show="loading"><div class="notification">{{ loadingStatus }}</div></div>');
 });
 
 'use strict';
